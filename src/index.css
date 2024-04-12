@@ -1,0 +1,20 @@
+@import url(https://db.onlinewebfonts.com/c/ea250342ec4016561ba9e791c2f39c11?family=Posterama+2001+W04+Regular);
+@import url(https://db.onlinewebfonts.com/c/c545a36000d0fe5eb6dd44b3cabda9cf?family=Posterama+2001+W04+Black);
+
+body {
+  font-family: "Posterama 2001 W04 Black";
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  /* this makes sure the padding and the border is included in the box sizing */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html body {
+  padding: 0;
+  margin: 0;
+  overflow-x: inherit;
+}
