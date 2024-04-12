@@ -39,8 +39,27 @@
 }
 
 .ourteam-title {
+  display: flex;
   font-size: 6rem;
   margin-left: 18vw;
+  opacity: 0;
+  animation: scrolled-team 1.5s forwards;
+  animation-delay: 0.2s;
+}
+.ourteam-title-prev {
+  font-size: 6rem;
+  opacity: 0;
+}
+@keyframes scrolled-team {
+  0% {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 @media (max-width: 500px) {

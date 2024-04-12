@@ -1,11 +1,12 @@
 import React, { forwardRef, useState } from "react";
 import "./Events.css";
 import Slider from "react-slick";
-
+import { useInView } from "react-intersection-observer";
 import useMediaQuery from "./useMediaQuery";
+
 const Events = forwardRef(function Hi(props, ref) {
   const matches = useMediaQuery("(max-width:500px)");
-
+  const { ref: headref, inView } = useInView();
   const settings = {
     dots: true,
     infinite: true,
@@ -13,12 +14,16 @@ const Events = forwardRef(function Hi(props, ref) {
     slidesToShow: matches ? 1 : 3,
     slidesToScroll: 1,
   };
-
   const [pastEvents, setpastEvents] = useState(true);
 
   return (
     <div className="events-container" id="eventsID">
-      <div className="events-heading">//Events</div>
+      <div
+        className={inView ? "events-heading" : "events-heading-prev"}
+        ref={headref}
+      >
+        //Events
+      </div>
       <div ref={ref}>
         <Slider {...settings}>
           <div className="card">

@@ -3,12 +3,19 @@ import "./OurTeam.css";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
+import { useInView } from "react-intersection-observer";
 
 const OurTeam = forwardRef(function OurTeam(props, ref) {
+  const { ref: evRef, inView } = useInView();
   const [execs, setExecs] = useState(true);
   return (
     <div className="team-container" id="teamID">
-      <div className="ourteam-title">//OUR TEAM</div>
+      <div
+        className={inView ? "ourteam-title" : "ourteam-title-prev"}
+        ref={evRef}
+      >
+        //OUR TEAM
+      </div>
 
       <div className="team-tabs">
         <div

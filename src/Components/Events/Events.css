@@ -18,6 +18,25 @@
   top: 5vh;
   left: 17vw;
   font-size: 6rem;
+  opacity: 0;
+  animation: scrolled 1.5s forwards;
+  animation-delay: 0.2s;
+}
+
+.events-heading-prev {
+  opacity: 0;
+}
+
+@keyframes scrolled {
+  0% {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 @media (max-width: 500px) {
   .events-container {
@@ -80,13 +99,15 @@ button:hover:before {
 @media (max-width: 500px) {
   .slick-slider {
     margin-top: 20%;
-
+    height: 110%;
     width: 105vw;
   }
   .card {
-    max-width: 300px;
+    width: 80vw;
+    margin: 10vw;
   }
 }
+
 .card-title {
   font-size: 18px;
   font-weight: 600;

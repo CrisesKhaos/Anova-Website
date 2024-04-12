@@ -4,7 +4,7 @@ canvas {
   top: 0;
   width: 100vw !important;
   height: 100vh !important;
-  z-index: 8;
+  z-index: 4;
 }
 
 .hide-div {

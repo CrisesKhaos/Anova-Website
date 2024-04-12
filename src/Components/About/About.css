@@ -32,6 +32,25 @@ canvas {
 
 .about-heading {
   font-size: 6rem;
+  opacity: 0;
+  animation: scrolled-team 1.5s forwards;
+  animation-delay: 0.2s;
+}
+
+.about-heading-prev {
+  font-size: 6rem;
+  opacity: 0;
+}
+@keyframes scrolled-team {
+  0% {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 .graph {
@@ -44,7 +63,9 @@ canvas {
   .about-heading {
     font-size: 4rem;
   }
-
+  .about-heading-prev {
+    font-size: 4rem;
+  }
   .about-card {
     height: fit-content;
     margin: 50px;
