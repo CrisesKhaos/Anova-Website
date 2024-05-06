@@ -2,7 +2,7 @@ import "./Curve.css";
 import ParticleImage from "react-particle-image";
 import img from "../../assets/react.svg";
 function Curve() {
-  const particleOptions = {};
+ 
   return (
     <ParticleImage
       src={img}

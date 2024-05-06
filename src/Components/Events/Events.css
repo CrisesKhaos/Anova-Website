@@ -84,6 +84,7 @@ button:hover:before {
   margin: 50px;
   padding: 20px;
   max-width: 330px;
+  min-width: 300px;
   min-height: 370px;
 
   border-radius: 20px;
@@ -94,6 +95,12 @@ button:hover:before {
 
 .card:hover {
   translate: 0 -10px;
+}
+
+@media (max-width: 1400px) {
+  .card {
+    width: 330px;
+  }
 }
 
 @media (max-width: 500px) {

@@ -56,7 +56,7 @@ export default function App() {
           />
         </div>
       </div>
-      <Landing />
+      <Landing ref={lRef} />
       <About ref={aRef} />
       <Events ref={eRef} />
       <OurTeam ref={tRef} />

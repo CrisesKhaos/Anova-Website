@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import "./Events.css";
 import Slider from "react-slick";
 import { useInView } from "react-intersection-observer";
@@ -6,15 +6,30 @@ import useMediaQuery from "./useMediaQuery";
 
 const Events = forwardRef(function Hi(props, ref) {
   const matches = useMediaQuery("(max-width:500px)");
+  const matches_med = useMediaQuery("(max-width:1450px)");
+
   const { ref: headref, inView } = useInView();
+
+  const handleCards = () => {
+    if (matches) return 1;
+    if (matches_med) {
+      console.log("matches", matches_med);
+      return 2;
+    } else return 3;
+  };
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: matches ? 1 : 3,
+    slidesToShow: matches ? 1 : matches_med ? 2 : 3,
     slidesToScroll: 1,
   };
   const [pastEvents, setpastEvents] = useState(true);
+
+  useEffect(() => {
+    handleCards();
+  }, [matches, matches_med]);
 
   return (
     <div className="events-container" id="eventsID">

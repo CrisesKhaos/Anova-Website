@@ -22,6 +22,16 @@ canvas {
   z-index: 6;
 }
 
+.scroll-down {
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 5;
+  animation: scroll 1s infinite;
+}
 /* Container for the loader */
 .loader {
   position: relative;

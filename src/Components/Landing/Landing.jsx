@@ -2,6 +2,7 @@ import Spline from "@splinetool/react-spline";
 import "./Landing.css";
 import { forwardRef, useState } from "react";
 import useMediaQuery from "../Events/useMediaQuery";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
 const Landing = forwardRef(function Landing(props, ref) {
   const [isLoading, setIsLoading] = useState(true);
@@ -13,6 +14,7 @@ const Landing = forwardRef(function Landing(props, ref) {
           <span className="orb"></span>
         </div>
       </div>
+      <MdKeyboardDoubleArrowDown className="scroll-down" />
       <Spline
         scene={
           matches
